@@ -1,0 +1,83 @@
+#root {
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.medals {
+  display: flex;
+  gap: 1rem; /* space between the cards */
+  flex-wrap: wrap; /* allows cards to wrap to the next line if they don’t fit */
+  padding: 1rem; /* optional padding around the entire container */
+}
+
+.country-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  width: 200px; /* sets a consistent card size */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* adds a subtle shadow */
+}
+
+
+
+.h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+.mb-1 {
+  margin-bottom: .5rem;
+}
+
+.pb-1 {
+  padding-bottom: .5rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #000;
+}
