@@ -1,16 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Medal from './Medals';
 
-function Country({ country, medals, onDelete }) {
+function Country({ country, handleIncrement, handleDecrement, onDelete }) {
+  const { id, name, gold, silver, bronze } = country;
+
   return (
     <div className="country-card">
-      <h2 className="border-bottom pb-1">{country.name}</h2>
+      <h2>{name}</h2>
       <div>
-        {medals.map(medal => (
-          <Medal key={medal.id} medal={medal} />
-        ))}
+        <Medal
+          medalType="gold"
+          count={gold}
+          countryId={id}
+          handleIncrement={handleIncrement}
+          handleDecrement={handleDecrement}
+        />
+        <Medal
+          medalType="silver"
+          count={silver}
+          countryId={id}
+          handleIncrement={handleIncrement}
+          handleDecrement={handleDecrement}
+        />
+        <Medal
+          medalType="bronze"
+          count={bronze}
+          countryId={id}
+          handleIncrement={handleIncrement}
+          handleDecrement={handleDecrement}
+        />
       </div>
-      <button className="mb-1" onClick={() => onDelete(country.id)}>🗑️</button>
+      <button className="mt-1" onClick={() => onDelete(id)}>🗑️</button>
     </div>
   );
 }
